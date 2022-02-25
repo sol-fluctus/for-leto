@@ -1,22 +1,14 @@
 
 2022-02-18T10:41:32.646982162Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
-
 2022-02-18T10:41:32.646985528Z ORDER BY p.date DESC
-
 2022-02-18T10:41:32.646988033Z LIMIT @__p_3 OFFSET @__p_2
-
 2022-02-18T11:45:53.690876870Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
-
 2022-02-18T11:45:53.691239929Z  Executed DbCommand (2ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
 
 2022-02-18T11:45:53.691248696Z SELECT COUNT(*)::INT
-
 2022-02-18T11:45:53.691252102Z FROM payments AS p
-
 2022-02-18T11:45:53.691255148Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
-
 2022-02-18T11:45:53.695931686Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
-
 2022-02-18T11:45:53.695959277Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime), @__p_3='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 
 2022-02-18T11:45:53.695963095Z SELECT p.id, p.amount, p.amount_usd, p.commentary, p.created_by_user_id, p.created_date, p.currency_id, p.date, p.department_id, p.expence_item_id, p.invoice_description, p.level_id, p.modified_by_user_id, p.modified_date, p.paid_from_account_id, p.recipient, p.region_id, p.status
@@ -160,7 +152,7 @@
 2022-02-18T11:57:22.758746764Z WHERE (((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.created_by_user_id = ANY (@__creatorsIds_2) OR (p.created_by_user_id IS NULL AND array_position(@__creatorsIds_2, NULL) IS NOT NULL))) AND (p.status <> 1)
 
 2022-02-18T11:57:22.792517014Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
-     
+�����
 
 18T11:57:22.792542742Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime), @__creatorsIds_2='?' (DbType = Object), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 
@@ -198,9 +190,6 @@
 
 2022-02-18T11:57:23.140167066Z OFFSET @__p_6
 
-
-
-
 ERROR IN SERVICE:
 
 
@@ -215,11 +204,7 @@ ERROR IN SERVICE:
 
     Error: {"code":16,"details":"Unauthorized: HTTP status code 401; transport: missing content-type field","metadata":{"content-type":["application/grpc"]}}
 
-
-
 {"code":16,"details":"Unauthorized: HTTP status code 401; transport: missing content-type field","metadata":{"content-type":["application/grpc"]}}
-
-
 
 ERROR IN SERVICE:
 
