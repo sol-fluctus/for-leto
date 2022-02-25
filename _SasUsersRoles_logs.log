@@ -1,0 +1,200 @@
+
+DELETE FROM refresh_tokens
+
+WHERE id = @p0;
+
+Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+ Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?'], CommandType='Text', CommandTimeout='30']
+
+INSERT INTO refresh_tokens (expires, refresh_token, user_id)
+
+VALUES (@p0, @p1, @p2)
+
+RETURNING id;
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.LogicalHandler[0]
+
+ Start processing HTTP request POST http://sas-fabio:9997/SenlaApiService.SenlaApiService/GetData
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.ClientHandler[0]
+
+ Sending HTTP request POST http://sas-fabio:9997/SenlaApiService.SenlaApiService/GetData
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.ClientHandler[0]
+
+ Received HTTP response headers after 796.3661ms - 200
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.LogicalHandler[0]
+
+ End processing HTTP request after 797.9689ms - 200
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.LogicalHandler[0]
+
+ Start processing HTTP request POST http://sas-fabio:9997/SenlaApiService.SenlaApiService/GetData
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.ClientHandler[0]
+
+ Sending HTTP request POST http://sas-fabio:9997/SenlaApiService.SenlaApiService/GetData
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.ClientHandler[0]
+
+ Received HTTP response headers after 97.3189ms - 200
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.LogicalHandler[0]
+
+ End processing HTTP request after 97.8919ms - 200
+
+Info\: DeleteOldTokensJob[0]
+
+ Starting.
+
+Error\: DeleteOldTokensJob[0]
+
+ Problems with deleting of tokens:System.NotSupportedException: Cannot apply binary operation on types 'timestamp with time zone' and 'timestamp without time zone', convert one of the operands first.
+
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Query.NpgsqlSqlExpressionFactory.ApplyTypeMapping(SqlExpression sqlExpression, RelationalTypeMapping typeMapping)
+
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionFactory.ApplyTypeMappingOnSqlBinary(SqlBinaryExpression sqlBinaryExpression, RelationalTypeMapping typeMapping)
+
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionFactory.ApplyTypeMapping(SqlExpression sqlExpression, RelationalTypeMapping typeMapping)
+
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Query.NpgsqlSqlExpressionFactory.ApplyTypeMappingOnSqlBinary(SqlBinaryExpression binary, RelationalTypeMapping typeMapping)
+
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Query.NpgsqlSqlExpressionFactory.ApplyTypeMapping(SqlExpression sqlExpression, RelationalTypeMapping typeMapping)
+
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionFactory.MakeBinary(ExpressionType operatorType, SqlExpression left, SqlExpression right, RelationalTypeMapping typeMapping)
+
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Query.Internal.NpgsqlSqlTranslatingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.TranslateInternal(Expression expression)
+
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateExpression(Expression expression)
+
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateWhere(ShapedQueryExpression source, LambdaExpression predicate)
+
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+
+   at Sas.UsersRolesService.Dao.Providers.InternalRefreshTokenProvider.InternalRefreshTokenProvider.DeleteOldTokensAsync() in /_sources/Service/Dao/Providers/InternalRefreshTokenProvider/InternalRefreshTokenProvider.cs:line 138
+
+   at Sas.UsersRolesService.Jobs.DeleteOldTokensJob.Execute(IJobExecutionContext context) in /_sources/Service/Jobs/DeleteOldTokensJob.cs:line 34
+
+Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+ Executed DbCommand (1ms) [Parameters=[@__userId_0='?'], CommandType='Text', CommandTimeout='30']
+
+SELECT u.id, u.add_payments, u.modify_others_payments, u.user_id
+
+FROM user_basic_permissions AS u
+
+WHERE u.user_id = @__userId_0
+
+LIMIT 1
+
+Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+ Executed DbCommand (1ms) [Parameters=[@__userId_0='?'], CommandType='Text', CommandTimeout='30']
+
+SELECT u.id, u.entity_id, u.entity_type, u.reading_available, u.user_id, u.using_available
+
+FROM user_reference_permissions AS u
+
+WHERE u.user_id = @__userId_0
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.LogicalHandler[0]
+
+ Start processing HTTP request POST http://sas-fabio:9997/SenlaApiService.SenlaApiService/GetData
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.ClientHandler[0]
+
+ Sending HTTP request POST http://sas-fabio:9997/SenlaApiService.SenlaApiService/GetData
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.ClientHandler[0]
+
+ Received HTTP response headers after 250.0686ms - 200
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.LogicalHandler[0]
+
+ End processing HTTP request after 250.6867ms - 200
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.LogicalHandler[0]
+
+ Start processing HTTP request POST http://sas-fabio:9997/SenlaApiService.SenlaApiService/GetData
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.ClientHandler[0]
+
+ Sending HTTP request POST http://sas-fabio:9997/SenlaApiService.SenlaApiService/GetData
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.ClientHandler[0]
+
+ Received HTTP response headers after 92.1351ms - 200
+
+Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.LogicalHandler[0]
+
+ End processing HTTP request after 93.3212ms - 200
+
+Info\: DeleteOldTokensJob[0]
+
+ Starting.
+
+Error\: DeleteOldTokensJob[0]
+
+ Problems with deleting of tokens:System.NotSupportedException: Cannot apply binary operation on types 'timestamp with time zone' and 'timestamp without time zone', convert one of the operands first.
+
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Query.NpgsqlSqlExpressionFactory.ApplyTypeMapping(SqlExpression sqlExpression, RelationalTypeMapping typeMapping)
+
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionFactory.ApplyTypeMappingOnSqlBinary(SqlBinaryExpression sqlBinaryExpression, RelationalTypeMapping typeMapping)
+
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionFactory.ApplyTypeMapping(SqlExpression sqlExpression, RelationalTypeMapping typeMapping)
+
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Query.NpgsqlSqlExpressionFactory.ApplyTypeMappingOnSqlBinary(SqlBinaryExpression binary, RelationalTypeMapping typeMapping)
+
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Query.NpgsqlSqlExpressionFactory.ApplyTypeMapping(SqlExpression sqlExpression, RelationalTypeMapping typeMapping)
+
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionFactory.MakeBinary(ExpressionType operatorType, SqlExpression left, SqlExpression right, RelationalTypeMapping typeMapping)
+
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Query.Internal.NpgsqlSqlTranslatingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.TranslateInternal(Expression expression)
+
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateExpression(Expression expression)
+
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateWhere(ShapedQueryExpression source, LambdaExpression predicate)
+
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+
+   at Sas.UsersRolesService.Dao.Providers.InternalRefreshTokenProvider.InternalRefreshTokenProvider.DeleteOldTokensAsync() in /_sources/Service/Dao/Providers/InternalRefreshTokenProvider/InternalRefreshTokenProvider.cs:line 138
+
+   at Sas.UsersRolesService.Jobs.DeleteOldTokensJob.Execute(IJobExecutionContext context) in /_sources/Service/Jobs/DeleteOldTokensJob.cs:line 34

@@ -1,0 +1,242 @@
+
+2022-02-18T10:41:32.646979126Z FROM payments AS p
+
+2022-02-18T10:41:32.646982162Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
+
+2022-02-18T10:41:32.646985528Z ORDER BY p.date DESC
+
+2022-02-18T10:41:32.646988033Z LIMIT @__p_3 OFFSET @__p_2
+
+2022-02-18T11:45:53.690876870Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:45:53.691239929Z  Executed DbCommand (2ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:45:53.691248696Z SELECT COUNT(*)::INT
+
+2022-02-18T11:45:53.691252102Z FROM payments AS p
+
+2022-02-18T11:45:53.691255148Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
+
+2022-02-18T11:45:53.695931686Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:45:53.695959277Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime), @__p_3='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:45:53.695963095Z SELECT p.id, p.amount, p.amount_usd, p.commentary, p.created_by_user_id, p.created_date, p.currency_id, p.date, p.department_id, p.expence_item_id, p.invoice_description, p.level_id, p.modified_by_user_id, p.modified_date, p.paid_from_account_id, p.recipient, p.region_id, p.status
+
+2022-02-18T11:45:53.695966621Z FROM payments AS p
+
+2022-02-18T11:45:53.695969647Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
+
+2022-02-18T11:45:53.695973524Z ORDER BY p.date DESC
+
+2022-02-18T11:45:53.695976259Z LIMIT @__p_3 OFFSET @__p_2
+
+2022-02-18T11:48:45.953253265Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:48:45.953287329Z  Executed DbCommand (2ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:48:45.953291326Z SELECT COUNT(*)::INT
+
+2022-02-18T11:48:45.953294432Z FROM payments AS p
+
+2022-02-18T11:48:45.953297278Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
+
+2022-02-18T11:48:45.957946714Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:48:45.957970879Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime), @__p_3='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:48:45.958244141Z SELECT p.id, p.amount, p.amount_usd, p.commentary, p.created_by_user_id, p.created_date, p.currency_id, p.date, p.department_id, p.expence_item_id, p.invoice_description, p.level_id, p.modified_by_user_id, p.modified_date, p.paid_from_account_id, p.recipient, p.region_id, p.status
+
+2022-02-18T11:48:45.958280830Z FROM payments AS p
+
+2022-02-18T11:48:45.958284026Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
+
+2022-02-18T11:48:45.958287221Z ORDER BY p.date DESC
+
+2022-02-18T11:48:45.958289967Z LIMIT @__p_3 OFFSET @__p_2
+
+2022-02-18T11:51:33.734075102Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:51:33.734099257Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:51:33.734102854Z SELECT COUNT(*)::INT
+
+2022-02-18T11:51:33.734105870Z FROM payments AS p
+
+2022-02-18T11:51:33.734108775Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
+
+2022-02-18T11:51:33.739164472Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:51:33.739185221Z  Executed DbCommand (2ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime), @__p_3='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:51:33.739188878Z SELECT p.id, p.amount, p.amount_usd, p.commentary, p.created_by_user_id, p.created_date, p.currency_id, p.date, p.department_id, p.expence_item_id, p.invoice_description, p.level_id, p.modified_by_user_id, p.modified_date, p.paid_from_account_id, p.recipient, p.region_id, p.status
+
+2022-02-18T11:51:33.739192104Z FROM payments AS p
+
+2022-02-18T11:51:33.739194769Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
+
+2022-02-18T11:51:33.739198265Z ORDER BY p.date DESC
+
+2022-02-18T11:51:33.739201040Z LIMIT @__p_3 OFFSET @__p_2
+
+2022-02-18T11:52:49.335672306Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:52:49.335697092Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:52:49.335701130Z SELECT COUNT(*)::INT
+
+2022-02-18T11:52:49.335704426Z FROM payments AS p
+
+2022-02-18T11:52:49.335707402Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
+
+2022-02-18T11:52:49.339638221Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:52:49.339656996Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime), @__p_3='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:52:49.339661325Z SELECT p.id, p.amount, p.amount_usd, p.commentary, p.created_by_user_id, p.created_date, p.currency_id, p.date, p.department_id, p.expence_item_id, p.invoice_description, p.level_id, p.modified_by_user_id, p.modified_date, p.paid_from_account_id, p.recipient, p.region_id, p.status
+
+2022-02-18T11:52:49.339664851Z FROM payments AS p
+
+2022-02-18T11:52:49.339681372Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
+
+2022-02-18T11:52:49.339685089Z ORDER BY p.date DESC
+
+2022-02-18T11:52:49.339687514Z LIMIT @__p_3 OFFSET @__p_2
+
+2022-02-18T11:53:16.727417546Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:53:16.727438035Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:53:16.727441391Z SELECT COUNT(*)::INT
+
+2022-02-18T11:53:16.727444136Z FROM payments AS p
+
+2022-02-18T11:53:16.727446841Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
+
+2022-02-18T11:53:16.732322489Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:53:16.732344009Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime), @__p_3='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:53:16.732347967Z SELECT p.id, p.amount, p.amount_usd, p.commentary, p.created_by_user_id, p.created_date, p.currency_id, p.date, p.department_id, p.expence_item_id, p.invoice_description, p.level_id, p.modified_by_user_id, p.modified_date, p.paid_from_account_id, p.recipient, p.region_id, p.status
+
+2022-02-18T11:53:16.732351613Z FROM payments AS p
+
+2022-02-18T11:53:16.732354519Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
+
+2022-02-18T11:53:16.732358066Z ORDER BY p.date DESC
+
+2022-02-18T11:53:16.732361662Z LIMIT @__p_3 OFFSET @__p_2
+
+2022-02-18T11:57:11.326971123Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:57:11.326994287Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:57:11.326998104Z SELECT COUNT(*)::INT
+
+2022-02-18T11:57:11.327098492Z FROM payments AS p
+
+2022-02-18T11:57:11.327107930Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
+
+2022-02-18T11:57:11.331915081Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:57:11.332030998Z  Executed DbCommand (2ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime), @__p_3='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:57:11.332130234Z SELECT p.id, p.amount, p.amount_usd, p.commentary, p.created_by_user_id, p.created_date, p.currency_id, p.date, p.department_id, p.expence_item_id, p.invoice_description, p.level_id, p.modified_by_user_id, p.modified_date, p.paid_from_account_id, p.recipient, p.region_id, p.status
+
+2022-02-18T11:57:11.332139241Z FROM payments AS p
+
+2022-02-18T11:57:11.332142347Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
+
+2022-02-18T11:57:11.332158788Z ORDER BY p.date DESC
+
+2022-02-18T11:57:11.332161623Z LIMIT @__p_3 OFFSET @__p_2
+
+2022-02-18T11:57:22.758432114Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:57:22.758452863Z  Executed DbCommand (39ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime), @__creatorsIds_2='?' (DbType = Object)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:57:22.758456490Z SELECT COUNT(*)::INT
+
+2022-02-18T11:57:22.758459416Z FROM payments AS p
+
+2022-02-18T11:57:22.758746764Z WHERE (((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.created_by_user_id = ANY (@__creatorsIds_2) OR (p.created_by_user_id IS NULL AND array_position(@__creatorsIds_2, NULL) IS NOT NULL))) AND (p.status <> 1)
+
+2022-02-18T11:57:22.792517014Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+     
+
+18T11:57:22.792542742Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime), @__creatorsIds_2='?' (DbType = Object), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:57:22.792758767Z SELECT p.id, p.amount, p.amount_usd, p.commentary, p.created_by_user_id, p.created_date, p.currency_id, p.date, p.department_id, p.expence_item_id, p.invoice_description, p.level_id, p.modified_by_user_id, p.modified_date, p.paid_from_account_id, p.recipient, p.region_id, p.status
+
+2022-02-18T11:57:22.792768164Z FROM payments AS p
+
+2022-02-18T11:57:22.792771040Z WHERE (((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.created_by_user_id = ANY (@__creatorsIds_2) OR (p.created_by_user_id IS NULL AND array_position(@__creatorsIds_2, NULL) IS NOT NULL))) AND (p.status <> 1)
+
+2022-02-18T11:57:22.792774737Z ORDER BY p.date DESC
+
+2022-02-18T11:57:22.792777342Z OFFSET @__p_3
+
+2022-02-18T11:57:23.126399229Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:57:23.126417473Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime), @__currencyIds_2='?' (DbType = Object), @__expensesItemsIds_3='?' (DbType = Object), @__levelIds_4='?' (DbType = Object), @__checkingAccounts_5='?' (DbType = Object)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:57:23.126420990Z SELECT COUNT(*)::INT
+
+2022-02-18T11:57:23.126423655Z FROM payments AS p
+
+2022-02-18T11:57:23.126651502Z WHERE ((((((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND p.currency_id = ANY (@__currencyIds_2)) AND p.expence_item_id = ANY (@__expensesItemsIds_3)) AND p.level_id = ANY (@__levelIds_4)) AND p.paid_from_account_id = ANY (@__checkingAccounts_5)) AND (p.status <> 1)
+
+2022-02-18T11:57:23.139335808Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
+
+2022-02-18T11:57:23.139357158Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime), @__currencyIds_2='?' (DbType = Object), @__expensesItemsIds_3='?' (DbType = Object), @__levelIds_4='?' (DbType = Object), @__checkingAccounts_5='?' (DbType = Object), @__p_6='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+
+2022-02-18T11:57:23.139746618Z SELECT p.id, p.amount, p.amount_usd, p.commentary, p.created_by_user_id, p.created_date, p.currency_id, p.date, p.department_id, p.expence_item_id, p.invoice_description, p.level_id, p.modified_by_user_id, p.modified_date, p.paid_from_account_id, p.recipient, p.region_id, p.status
+
+2022-02-18T11:57:23.139756367Z FROM payments AS p
+
+2022-02-18T11:57:23.140153892Z WHERE ((((((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND p.currency_id = ANY (@__currencyIds_2)) AND p.expence_item_id = ANY (@__expensesItemsIds_3)) AND p.level_id = ANY (@__levelIds_4)) AND p.paid_from_account_id = ANY (@__checkingAccounts_5)) AND (p.status <> 1)
+
+2022-02-18T11:57:23.140164351Z ORDER BY p.date DESC
+
+2022-02-18T11:57:23.140167066Z OFFSET @__p_6
+
+
+
+
+ERROR IN SERVICE:
+
+
+    Name: UsersRolesService
+
+
+    Method: GetBasicPermissions
+
+
+    Params: {"user_id":"b98eff3e-fed3-4a54-b720-0bb51c328cf1"}
+
+
+    Error: {"code":16,"details":"Unauthorized: HTTP status code 401; transport: missing content-type field","metadata":{"content-type":["application/grpc"]}}
+
+
+
+{"code":16,"details":"Unauthorized: HTTP status code 401; transport: missing content-type field","metadata":{"content-type":["application/grpc"]}}
+
+
+
+ERROR IN SERVICE:
+
+
+    Name: PaymentsAggregationService
+
+
+    Method: Get
+
+
+    Params: {"currencies_ids":[],"expence_item_ids":[],"level_ids":[],"checking_accounts":[],"start_date":{"seconds":1643662800,"nanos":0},"end_date":{"seconds":1646082000,"nanos":0},"take":50,"skip":0}
+
+
+    Error: {"code":16,"details":"Unauthorized: HTTP status code 401; transport: missing content-type field","metadata":{"content-type":["application/grpc"]}}
+
+
+
+{"code":16,"details":"Unauthorized: HTTP status code 401; transport: missing content-type field","metadata":{"content-type":["application/grpc"]}}
