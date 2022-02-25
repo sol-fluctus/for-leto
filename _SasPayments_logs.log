@@ -133,7 +133,7 @@
 2022-02-18T11:57:22.758746764Z WHERE (((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.created_by_user_id = ANY (@__creatorsIds_2) OR (p.created_by_user_id IS NULL AND array_position(@__creatorsIds_2, NULL) IS NOT NULL))) AND (p.status <> 1)
 
 2022-02-18T11:57:22.792517014Z Info\: Microsoft.EntityFrameworkCore.Database.Command[0]
-     
+�����
 
 18T11:57:22.792542742Z  Executed DbCommand (1ms) [Parameters=[@__startPeriod_0='?' (DbType = DateTime), @__finishPeriod_1='?' (DbType = DateTime), @__creatorsIds_2='?' (DbType = Object), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 
@@ -171,9 +171,6 @@
 
 2022-02-18T11:57:23.140167066Z OFFSET @__p_6
 
-
-
-
 ERROR IN SERVICE:
 
 
@@ -188,11 +185,7 @@ ERROR IN SERVICE:
 
     Error: {"code":16,"details":"Unauthorized: HTTP status code 401; transport: missing content-type field","metadata":{"content-type":["application/grpc"]}}
 
-
-
 {"code":16,"details":"Unauthorized: HTTP status code 401; transport: missing content-type field","metadata":{"content-type":["application/grpc"]}}
-
-
 
 ERROR IN SERVICE:
 
