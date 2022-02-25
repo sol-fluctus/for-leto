@@ -151,9 +151,7 @@ Info\: System.Net.Http.HttpClient.SenlaApiServiceClient.LogicalHandler[0]
 
 Info\: DeleteOldTokensJob[0]
 
- Starting.
-
-Error\: DeleteOldTokensJob[0]
+ Starting.https
 
  Problems with deleting of tokens:System.NotSupportedException: Cannot apply binary operation on types 'timestamp with time zone' and 'timestamp without time zone', convert one of the operands first.
 
