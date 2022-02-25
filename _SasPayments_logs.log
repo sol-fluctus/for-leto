@@ -1,6 +1,4 @@
 
-2022-02-18T10:41:32.646979126Z FROM payments AS p
-
 2022-02-18T10:41:32.646982162Z WHERE ((p.date >= @__startPeriod_0) AND (p.date <= @__finishPeriod_1)) AND (p.status <> 1)
 
 2022-02-18T10:41:32.646985528Z ORDER BY p.date DESC
